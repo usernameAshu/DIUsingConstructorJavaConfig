@@ -10,11 +10,16 @@ import com.infotech.service.Communication;
 @Configuration
 public class SpringConfig {
 	
-	@Bean
+/*	@Bean
 	public Communication communication() {
 		return new Communication( message() );
-	}
+	}*/
 
+	@Bean
+	public Communication communication() {
+		return new Communication();
+	}
+	
 	@Bean
 	public Message message() {
 		return new ActiveMQMessage();
